@@ -13,6 +13,19 @@
  * PRIVATE TYPE DECLARATION
  ********************/
 
+struct stackNode {
+    int data;
+    struct stackNode* next;
+};
+
+typedef struct stackNode stackNode_t;
+
+
+struct stackList{
+    stackNode_t* head;
+};
+
+typedef struct stackList IntStack_t;
 
 
 

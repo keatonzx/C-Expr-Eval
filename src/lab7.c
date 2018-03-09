@@ -27,6 +27,7 @@ bool isOpenBracket(char* token);
 bool isCloseBracket(char* token);
 bool isBracket(char* token);
 int precedence(char* token);
+int calculate ( int rightValue, int leftValue, char op);
 
 // Experession Evaluator Functions
 Queue_t toPostfix(Queue_t infix_tokens);
@@ -234,8 +235,34 @@ Queue_t toPostfix(Queue_t infix_tokens)
 // POST: returns the result of evaluating the post-fix expression.
 int evalExpr(Queue_t expression)
 {
+	IntStack_t stack = istackCreate();
+	
+	//char* op = qDequeue(experession);
+	while(!qIsEmpty(expression)){
+		
+		char* op = qDequeue(&expression);
 
+		if(isOperand(op)){
+			istackPush(&stack,operandValue(op));
+		}
+		if(isOperator(op)){
+			
+			int rightValue = istackPop(&stack);
+			int leftValue =  istackPop(&stack);
+		//	printf("r%d l%d", rightValue,leftValue);
+		//	calculate(rightValue,leftValue,op);
+			
+			//leftNode->data 
+			
+		}
+		
+	}
 	printf("NOT IMPLEMENTED YET -- that's your job ;-)\n");
 	return -1;  // STUB
 
+}
+
+int calculate ( int rightValue, int leftValue, char op)
+{
+	
 }
