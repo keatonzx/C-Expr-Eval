@@ -4,7 +4,7 @@
  *     Infix expression is provided as a single, quoted command-line argument.
  *
  *  COMP220: Lab 7 Starter Project - Stacks & Queues
- *  Author:  Joseph Fall
+ *  Author:  Joseph Fall  
  *  Date:    Mar. 6, 2018
  */
 #include <stdio.h>
